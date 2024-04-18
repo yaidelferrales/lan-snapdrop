@@ -182,15 +182,16 @@ class Peer {
     }
 
     _setIP(request) {
-        if (request.headers['x-forwarded-for']) {
-            this.ip = request.headers['x-forwarded-for'].split(/\s*,\s*/)[0];
-        } else {
-            this.ip = request.connection.remoteAddress;
-        }
+        this.ip = '0.0.0.0';
+        // if (request.headers['x-forwarded-for']) {
+        //     this.ip = request.headers['x-forwarded-for'].split(/\s*,\s*/)[0];
+        // } else {
+        //     this.ip = request.connection.remoteAddress;
+        // }
         // IPv4 and IPv6 use different values to refer to localhost
-        if (this.ip == '::1' || this.ip == '::ffff:127.0.0.1') {
-            this.ip = '127.0.0.1';
-        }
+        // if (this.ip == '::1' || this.ip == '::ffff:127.0.0.1') {
+        //     this.ip = '127.0.0.1';
+        // }
     }
 
     _setPeerId(request) {
