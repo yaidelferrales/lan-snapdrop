@@ -30,5 +30,8 @@ Alternatively, you can become a [Github Sponsor](https://github.com/sponsors/Rob
 
 Thanks a lot for supporting free and open software!
 
+## Lan changes
 
+This project was intended to be used published in a host above the LAN network so it can use the public ip address of the clients. For this version the check on the ip
+is bypassed by assigning all the clients the same ip address as they should all live in the same LAN.
  
